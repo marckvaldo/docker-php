@@ -1,6 +1,9 @@
 # Docker Laravel 
 
-<img src="https://laravel.com/img/logomark.min.svg">
+<div style="background-color: #f0f0f0; height:20vh; display: flex; flex-direction: row; justify-content: center;">
+<img src="https://github.com/marckvaldo/docker-php/blob/main/www/public/imagens/laravel.png">
+<img src="https://github.com/marckvaldo/docker-php/blob/main/www/public/imagens/docker.png">
+</div>
 
 ![GitHub](https://img.shields.io/github/license/marckvaldo/docker-php)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/marckvaldo/docker-php)
