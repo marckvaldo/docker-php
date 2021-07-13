@@ -1,0 +1,81 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: "./nginx"
+    depends_on:
+      - php  
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./nginx:/etc/nginx/conf.d"
+      - "./www:/var/www"
+      - "./nginx/logs:/var/log/nginx"
+      - "./nginx/ssl:/ssl"
+    links:
+      - php 
+    networks:
+     - app-network
+  php:
+    build:
+      context: "./php"
+    depends_on:
+      - dataBaseMysql
+    ports:
+      -  "9000:9000"
+    volumes:
+      - "./www:/var/www"  
+      - "./php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+    links:
+      - dataBaseMysql 
+    networks:
+      - app-network 
+  dataBaseMysql:   
+    image: mysql:5.7.29
+    container_name: mysqlDataBase
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+    expose:
+      - "3306"  
+    volumes:
+      - "./mysql/data:/var/lib/mysql"
+      - "./mysql/mysqlconfig/my.cnf:/etc/mysql/conf.d/my.cnf"
+    networks:
+      - app-network
+  redis:
+    image: redis
+    container_name: redis
+    volumes: 
+      - ./redis:/data
+    ports: 
+      - "8379:6379" 
+    networks:
+      - app-network
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8000:80
+    depends_on:
+      - dataBaseMysql  
+    environment:
+      PMA_PORT: ${PMA_PORT}
+      PMA_ARBITRARY: ${PMA_ARBITRARY}
+    links: 
+     - dataBaseMysql
+    networks:
+      - app-network
+
+networks: 
+  app-network:
+    driver: bridge
+    
+volumes:
+  dabaseMysql: 
+    driver: local            
