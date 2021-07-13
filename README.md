@@ -7,7 +7,7 @@
 
 
 ## Descrição do Projeto
-Esse projeto tem o intuito de ajudar a criar um ambiente de desenvolvimento, para o ecosistema laravel....
+Esse projeto tem o intuito de criar um ambiente de desenvolvimento, para o ecossistema Laravel....
 
 <h4>
     <a href="https://laravel.com/">🔗 Laravel</a>
