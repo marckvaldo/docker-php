@@ -55,3 +55,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [PHP](https://www.php.net/)
 - [Redis](https://redis.io/)
 - [Docker](https://www.docker.com/)
+
+
+#📝 Licença
+Este projeto esta sobe a licença MIT.
+
+Feito com ❤️ por Marckvaldo Wallas 👋🏽 Entre em contato!
