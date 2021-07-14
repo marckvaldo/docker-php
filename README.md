@@ -18,8 +18,6 @@ Esse projeto tem o intuito de criar um ambiente de desenvolvimento, para o ecoss
 <p>🚀 Ambiente pronto para construções de Apps em PHP ou Laravel</p>
 
 
-
-
 <h4> 
 	🚧  Docker Laravel 🚀 Em construção...  🚧
 </h4>
@@ -48,6 +46,9 @@ $ docker-compose up -d
 # O servidor inciará na porta:80/443 - acesse <http://localhost>
 ```
 
+### 🛠 Configuração
+
+As configurações de senha e porta do Mysql e phpmyadmin estão no arquivo .env na raiz do projeto
 
 ### 🛠 Tecnologias
 
