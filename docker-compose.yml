@@ -34,7 +34,6 @@ services:
       - app-network 
   dataBaseMysql:   
     image: mysql:5.7.29
-    container_name: mysqlDataBase
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
@@ -51,7 +50,6 @@ services:
       - app-network
   redis:
     image: redis
-    container_name: redis
     volumes: 
       - ./redis:/data
     ports: 

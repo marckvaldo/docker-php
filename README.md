@@ -44,6 +44,18 @@ $ cd docker-php
 $ docker-compose up -d
 
 # O servidor inciará na porta:80/443 - acesse <http://localhost>
+# O phpMyadmin está rodando na porta 8000 então digite localhost:8000
+# Para logar no phpMyadmin no campo Host/Servidor digite o nome do container mysql/MariaDB que está na coluna NAMES.
+# Para ver o nome do container digite no terminal docker ps...
+
+#CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                                      NAMES
+#a26674f177ae   phpmyadmin/phpmyadmin   "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:8000->80/tcp, :::8000->80/tcp                                      docker-php_phpmyadmin_1
+#9010af215c79   docker-php_nginx        "nginx -g 'daemon of…"   6 minutes ago   Up 6 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   docker-php_nginx_1
+#c1740f64316d   docker-php_php          "docker-php-entrypoi…"   6 minutes ago   Up 6 minutes   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp                                  docker-php_php_1
+#9cb8b5bccf54   mysql:5.7.29            "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   33060/tcp, 0.0.0.0:3307->3306/tcp, :::3307->3306/tcp                       docker-php_dataBaseMysql_1
+#8610cf137383   redis                   "docker-entrypoint.s…"   6 minutes ago   Up 6 minutes   0.0.0.0:8379->6379/tcp, :::8379->6379/tcp                                  docker-php_redis_1
+
+# No exemplo acima é o "docker-php_dataBaseMysql_1"
 ```
 
 ### 🛠 Configuração
