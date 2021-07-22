@@ -17,3 +17,4 @@ nginx/logs/error.log
 mysql/data/ib_logfile0
 mysql/data/ibdata1
 redis/dump.rdb
+mysql/data

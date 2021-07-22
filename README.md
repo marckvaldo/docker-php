@@ -45,7 +45,7 @@ $ docker-compose up -d
 
 # O servidor inciará na porta:80/443 - acesse <http://localhost>
 # O phpMyadmin está rodando na porta 8000 então digite localhost:8000
-# Para logar no phpMyadmin no campo Host/Servidor digite o nome do container mysql/MariaDB que está na coluna NAMES.
+# Para logar no phpMyadmin no campo Host/Servidor digite o nome do container Mysql/MariaDB que está na coluna NAMES.
 # Para ver o nome do container digite no terminal docker ps...
 
 #CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                                                      NAMES
@@ -60,14 +60,14 @@ $ docker-compose up -d
 
 ### 🛠 Configuração
 
-As configurações de senha e porta do Mysql e phpmyadmin estão no arquivo .env na raiz do projeto
+As configurações de senha e porta do Mariadb e phpmyadmin estão no arquivo .env na raiz do projeto
 
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Nginx](https://www.nginx.com/)
-- [Mysql](https://www.mysql.com/)
+- [Mariadb](https://mariadb.org/)
 - [PHP](https://www.php.net/)
 - [Redis](https://redis.io/)
 - [Docker](https://www.docker.com/)
@@ -76,4 +76,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 #📝 Licença
 Este projeto esta sobe a licença MIT.
 
-Feito com ❤️ por Marckvaldo Wallas 👋🏽 Entre em contato!
+Feito com ❤️ por Marckvaldo Wallas 👋🏽 Entre em contato (marckvaldo@hotmail.com, marckvaldowallas@gmail.com)
