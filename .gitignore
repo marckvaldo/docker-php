@@ -12,5 +12,5 @@ yarn-error.log
 docker-compose.yaml
 www/storage/framework
 /nginx/logs
-/redis
-/mysql/data
+mysql/data
+
